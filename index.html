@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admit Card Information Form</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<header>
+  <h1>🎟️ এডমিট কার্ড সংক্রান্ত তথ্যঃ</h1>
+</header>
+
+<form id="admitForm">
+
+  <label>এডমিট কার্ড ডাউনলোডের তারিখ:</label>
+  <input type="date" id="downloadDate">
+
+  <label>পরীক্ষা তারিখ ও সময়:</label>
+  <input type="datetime-local" id="examDateTime">
+
+  <label>পরীক্ষার বাকি দিনসংখ্যা:</label>
+  <input type="number" id="remainingDays" placeholder="দিন সংখ্যা লিখুন">
+
+  <label>এডমিট কার্ড সংযুক্তি:</label>
+  <input type="file" id="admitFile">
+
+  <label>পরীক্ষা কেন্দ্র / স্থান:</label>
+  <input type="text" id="examCenter" placeholder="পরীক্ষার স্থান লিখুন">
+
+  <label>বিজ্ঞপ্তির নথি (যদি থাকে):</label>
+  <input type="file" id="noticeFile">
+
+  <label>প্রতিষ্ঠানের নাম:</label>
+  <input type="text" id="orgName">
+
+  <label>পদের নাম:</label>
+  <input type="text" id="postName">
+
+  <label>পদের সংখ্যা (যদি থাকে):</label>
+  <input type="number" id="postCount">
+
+  <label>গ্রেড:</label>
+  <select id="grade">
+    <option value="">-- গ্রেড নির্বাচন করুন --</option>
+    <option value="গ্রেড-১">গ্রেড-১</option>
+    <option value="গ্রেড-২">গ্রেড-২</option>
+    <option value="গ্রেড-৩">গ্রেড-৩</option>
+    <option value="গ্রেড-৪">গ্রেড-৪</option>
+    <option value="গ্রেড-৫">গ্রেড-৫</option>
+    <option value="গ্রেড-৬">গ্রেড-৬</option>
+    <option value="গ্রেড-৭">গ্রেড-৭</option>
+    <option value="গ্রেড-৮">গ্রেড-৮</option>
+    <option value="গ্রেড-৯">গ্রেড-৯</option>
+    <option value="গ্রেড-১০">গ্রেড-১০</option>
+    <option value="গ্রেড-১১">গ্রেড-১১</option>
+    <option value="গ্রেড-১২">গ্রেড-১২</option>
+    <option value="গ্রেড-১৩">গ্রেড-১৩</option>
+    <option value="গ্রেড-১৪">গ্রেড-১৪</option>
+    <option value="গ্রেড-১৫">গ্রেড-১৫</option>
+    <option value="গ্রেড-১৬">গ্রেড-১৬</option>
+    <option value="গ্রেড-১৭">গ্রেড-১৭</option>
+    <option value="গ্রেড-১৮">গ্রেড-১৮</option>
+    <option value="গ্রেড-১৯">গ্রেড-১৯</option>
+    <option value="গ্রেড-২০">গ্রেড-২০</option>
+  </select>
+
+  <label>অগ্রাধিকারঃ</label>
+  <select id="priority">
+    <option value="">-- নির্বাচন করুন --</option>
+    <option value="প্রথম">প্রথম</option>
+    <option value="দ্বিতীয়">দ্বিতীয়</option>
+    <option value="তৃতীয়">তৃতীয়</option>
+  </select>
+
+  <button type="submit" class="submit-btn">সাবমিট</button>
+</form>
+
+<!-- Loading Overlay -->
+<div id="loading" class="loading" style="display:none;">
+  <div class="spinner"></div>
+  <p>ডেটা প্রসেসিং হচ্ছে...</p>
+</div>
+
+<script src="admitScript.js"></script>
+</body>
+</html>

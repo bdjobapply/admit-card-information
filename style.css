@@ -1,0 +1,207 @@
+/* Reset */
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body */
+body {
+  font-family: 'Nunito', sans-serif;
+  background: #f9fafc;
+  color: #384047;
+  padding: 20px;
+}
+
+/* Header */
+h1 {
+  margin: 0 0 25px 0;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+/* Form Container */
+form {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 25px 30px;
+  background: #f4f7f8;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+form:hover {
+  transform: translateY(-2px);
+}
+
+/* Labels */
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #34495e;
+}
+
+label.light {
+  font-weight: 300;
+  display: inline;
+}
+
+/* Inputs & Select */
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea,
+select {
+  background: #e8eeef;
+  border: none;
+  font-size: 15px;
+  padding: 12px;
+  width: 100%;
+  border-radius: 6px;
+  color: #333;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
+  margin-bottom: 18px;
+  transition: border 0.2s ease, background 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border: 1px solid #4bc970;
+  outline: none;
+  background: #fff;
+}
+
+/* Radio & Checkbox */
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 0 6px 10px 0;
+}
+
+/* Button */
+button {
+  padding: 14px;
+  color: #fff;
+  background: linear-gradient(135deg, #4bc970, #3ac162);
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 6px;
+  width: 100%;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #3ac162, #36b45e);
+  transform: translateY(-2px);
+}
+
+/* Fieldset */
+fieldset {
+  margin-bottom: 20px;
+  border: none;
+}
+
+legend {
+  font-size: 1.2em;
+  margin-bottom: 8px;
+}
+
+/* Number Badge */
+.number {
+  background-color: #5fcf80;
+  color: #fff;
+  height: 28px;
+  width: 28px;
+  display: inline-block;
+  font-size: 0.8em;
+  margin-right: 5px;
+  line-height: 28px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+/* Loading Overlay */
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  backdrop-filter: blur(5px);
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #4bc970;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+.loading p {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.5px;
+  animation: bounceText 1.2s infinite;
+}
+
+/* Animations */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes bounceText {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  form {
+    padding: 20px;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  .spinner {
+    width: 50px;
+    height: 50px;
+    border-width: 5px;
+  }
+  .loading p {
+    font-size: 16px;
+  }
+}
